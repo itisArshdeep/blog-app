@@ -9,8 +9,11 @@ const userSchema = mongoose.Schema({
     },
     password:{
         type:String,
+    },
+    profile:{
+        type:String,
     }
-})
+},{Timestamp:true})
 
 const userModel = mongoose.model('Users',userSchema);
 export default userModel;
