@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import connectDB from './utils/db.js';
 import authRoute from './routes/auth.js';
 import cookieParser from 'cookie-parser';
+import BlogsRoutes from './routes/blogs.js';
 
 const app = express();
 dotenv.config();
@@ -16,6 +17,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use('/auth',authRoute)
+app.use('/blogs',BlogsRoutes)
 
 app.listen(PORT,()=>{
     console.log(`app is listening at port ${PORT}`);
