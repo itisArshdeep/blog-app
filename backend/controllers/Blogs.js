@@ -23,7 +23,7 @@ const Update = async (req,res)=>{
 
         // const findPost 
     } catch (error) {
-        
+         
     }
 } 
 export {Create,Update} 
