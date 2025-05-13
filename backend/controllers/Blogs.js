@@ -25,5 +25,5 @@ const Update = async (req,res)=>{
     } catch (error) {
         
     }
-}
+} 
 export {Create,Update} 
