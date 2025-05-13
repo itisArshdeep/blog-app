@@ -26,4 +26,4 @@ const Update = async (req,res)=>{
          
     }  
 } 
-export {Create,Update} 
+export {Create,Update}  
