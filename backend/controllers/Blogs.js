@@ -14,7 +14,7 @@ const Create= async (req,res)=>{
     } catch (error) {
         return res.status(500).json({message:`error ${error.error}`})
     }
-}
+} 
 
 const Update = async (req,res)=>{
     try {
