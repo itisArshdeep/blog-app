@@ -10,7 +10,8 @@ dotenv.config();
 const PORT = process.env.PORT||4000
 
 app.use(express.json());
-app.use(cookieParser())
+app.use(cookieParser());
+app.use(express.static('public'));
 connectDB();
 app.get("/",(req,res)=>{
     res.send("home page")

@@ -7,7 +7,7 @@ try {
     const token = req.cookies.token;
 
     if(!token){
-        return res.status(401).status({sucess:"false",message:"login first"})
+        return res.status(401).json({sucess:"false",message:"login first"})
     }
     console.log(token);
     
@@ -15,12 +15,12 @@ try {
     const FindUser = await userModel.findById(decoded.userId);
     
     if(!FindUser){
-        return res.status(500).status({"sucess":"false","message":"internal server error"});
+        return res.status(500).json({"sucess":"false","message":"internal server error"});
     }
     next();
   
 } catch (error) {
-    return res.status(500).status({success:"false",error:error.error})
+    return res.status(500).json({success:"false",error:error.error})
 } 
 }
 
