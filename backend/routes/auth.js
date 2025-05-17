@@ -8,4 +8,4 @@ authRoute.post('/register',upload.single('profile'),register)
 authRoute.post('/login',login)
 authRoute.post('/logout',logout)
 
-export default authRoute;           
+export default authRoute;              
