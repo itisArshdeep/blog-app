@@ -53,7 +53,7 @@ const DeletePost = async (req,res)=>{
             ).catch(error => console.log("post deletion unsuccess")
             ); 
         } 
-        const deletedPost = await PostModel.findByIdAndDelete(postId); 
+        const deletedPost = await PostModel.findByIdAndDelete(postId);   
 
         return res.status(200).json({sucess:true,message:"deleted post successfully"});
 
