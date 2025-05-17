@@ -45,7 +45,7 @@ const DeletePost = async (req,res)=>{
         
         if(!FindPost){
             return res.status(404).json({sucess:false,message:"Post didnt found"});
-        }
+        } 
         if(FindPost.image){
             const profilePath = path.join('public/images',FindPost.image)
             fs.promises.unlink(profilePath)
