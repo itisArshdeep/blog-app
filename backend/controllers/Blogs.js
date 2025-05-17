@@ -51,7 +51,7 @@ const DeletePost = async (req,res)=>{
             fs.promises.unlink(profilePath)
             .then(()=>console.log('post image deleted as well')
             ).catch(error => console.log("post deletion unsuccess")
-            );
+            ); 
         }
         const deletedPost = await PostModel.findByIdAndDelete(postId); 
 
