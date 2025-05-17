@@ -52,7 +52,7 @@ const DeletePost = async (req,res)=>{
             .then(()=>console.log('post image deleted as well')
             ).catch(error => console.log("post deletion unsuccess")
             ); 
-        }
+        } 
         const deletedPost = await PostModel.findByIdAndDelete(postId); 
 
         return res.status(200).json({sucess:true,message:"deleted post successfully"});
